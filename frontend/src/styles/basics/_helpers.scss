@@ -1,0 +1,105 @@
+// Flex
+.flex {
+  display: flex;
+}
+
+.flex.inline-flex {
+  display: inline-flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+// List
+.clean-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.svg-img {
+  filter: invert(97%) sepia(61%) saturate(13%) hue-rotate(242deg)
+    brightness(103%) contrast(104%);
+}
+
+// Text
+.vertical-text {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+
+.tag-text {
+  color: $clr1;
+  text-transform: uppercase;
+  @include type(boldCondensed);
+}
+
+.icon {
+  width: em(16px);
+  height: em(16px);
+}
+
+button.long-click:active {
+  background-color: #e4f0f6;
+  color: #0079bf;
+}
+
+// Aspect ratios
+
+.ratio-16-9 {
+  @include aspect-ratio(100, 56);
+}
+
+.ratio-square {
+  @include aspect-ratio(100, 100);
+}
+
+.ratio-card {
+  @include aspect-ratio(100, 80);
+}
+
+.ratio-poster {
+  @include aspect-ratio(100, 150);
+}

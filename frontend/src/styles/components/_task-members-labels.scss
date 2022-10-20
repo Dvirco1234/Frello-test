@@ -1,0 +1,49 @@
+.members-labels-data {
+  grid-column: 2;
+  gap: 16px;
+  position: relative;
+  margin-bottom: 9px;
+  header {
+    padding: 10px;
+  }
+  @include for-mobile-layout {
+    grid-column: 1;
+    margin-left: 4px;
+  }
+
+  .label-modal,
+  .members-modal {
+    top: 60px;
+    header {
+      padding: 10px;
+    }
+  }
+
+  .label-container {
+    gap: 4px;
+    flex-wrap: wrap;
+
+    .task-label {
+      color: #ffffff;
+      min-width: em(40px);
+      font-weight: 600;
+
+    }
+
+    .add-label {
+      width: em(32px);
+      height: em(32px);
+      padding: 8px;
+
+      img {
+        width: em(16px);
+        height: em(16px);
+      }
+    }
+  }
+
+  .membersImgs {
+    align-items: center;
+    gap: 2px;
+  }
+}

@@ -1,0 +1,33 @@
+.group-menu-modal {
+  @include menu-modal;
+  cursor: auto;
+  padding: 0 0 12px;
+  top: em(35px);
+  left: 0;
+  li {
+    display: flex;
+    align-items: center;
+    height: em(32px);
+    padding: em(12px);
+  }
+  h4 {
+    font-weight: 600;
+    font-size: em(12px);
+    color: $lightTxt1;
+  }
+  .copy-group-container {
+    padding: em(12px);
+    text-align: left;
+    textarea {
+      font-family: inherit;
+      min-width: 100%;
+      min-height: 72px;
+      resize: none;
+      padding:em(8px);
+      margin-bottom: em(20px);
+    }
+    button {
+      @include button1Blue;
+    }
+  }
+}

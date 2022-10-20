@@ -1,0 +1,16 @@
+.date-modal {
+  @include menu-modal;
+  .datePicker {
+    width: 100%;
+  }
+  button.set-date {
+    @include button1Blue;
+    margin-bottom: em(7px);
+  }
+  .datetime-picker {
+    margin-bottom:20px;
+    .date-input {
+      width: 100%;
+    }
+  }
+}

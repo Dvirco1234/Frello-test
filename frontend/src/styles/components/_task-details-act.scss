@@ -1,0 +1,54 @@
+.activity-menu {
+  border-radius: 3px;
+  width: calc(100% - 1px);
+  box-shadow: 0 1px 2px -1px #091e4240, 0 0 0 1px #091e4214;
+  margin-bottom: 1rem;
+
+  &.shadow {
+    box-shadow: 0 4px 8px -2px #091e4240, 0 0 0 1px #091e4214;
+  }
+
+  .activity-input {
+    cursor: pointer;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    padding: 8px 12px;
+    height: 36px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &.open {
+      cursor: auto;
+    }
+  }
+
+  .activity-btns {
+    border-radius: inherit;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    .save-btn {
+      color: #fff;
+      background-color: #0079bf;
+      border: none;
+    }
+  }
+
+  .act-btn {
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.activity-list {
+  .user-activity {
+    margin-bottom: 8px;
+    grid-column: 1/-1;
+  }
+}

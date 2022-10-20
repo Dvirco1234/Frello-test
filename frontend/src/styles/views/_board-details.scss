@@ -1,0 +1,192 @@
+.board-details {
+    // padding: 0 0px 8px 13px;
+    // overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    // height: calc(100vh - 44px);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    .board-details-scroll {
+        background: linear-gradient(180deg,#ffffff3d 0,#ffffff3d 48px,#fff0 80px,#fff0);
+        overflow-y: hidden;
+        overflow-x: auto;
+        height: calc(100vh - 105px);
+        padding: 0 8px 8px 13px;
+
+        @include for-mobile-layout {
+            scroll-snap-type: x mandatory;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .placeholder-group-list-end {
+            min-width: 8px;
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar {
+            height: 11px;
+        }
+
+        &::-webkit-scrollbar-track {
+            margin: 0 48px 0 35px;
+            background: #0000002a;
+            height: 11px;
+            border-radius: 10px;
+            border: solid 8px transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #f6f6f69d;
+            border-radius: 10px;
+            border: solid 8px transparent;
+        }
+    }
+
+    .group-list {
+        align-items: flex-start;
+        margin-right: 13px;
+        // margin-bottom: 8px;
+    }
+
+    .add-group {
+        width: 272px;
+        min-width: 272px;
+        border-radius: 3px;
+        background-color: #00000014;
+        // color: #172b4d;
+        transition: 0.2s;
+
+        @include for-mobile-layout {
+            scroll-snap-align: center;
+            width: 85vw;
+            min-width: 85vw;
+        }
+
+        &:hover {
+            background-color: #00000029;
+            // color: #172b4d;
+        }
+
+        input {
+            margin-bottom: 4px;
+            width: 100%;
+            padding: 8px 12px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            box-shadow: inset 0 0 0 2px #0079bf;
+            border-radius: 3px;
+            &::placeholder{
+                color: #6a707b;
+            }
+        }
+
+        // img{
+        //     width: 16px;
+        // }
+
+        .new-group-container {
+            padding: 4px;
+            width: 100%;
+            // background-color: #ffffff3d;
+            background-color: #ebecf0;
+            border-radius: 3px;
+        }
+    }
+
+    .add-list-btn {
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-left: 12px;
+        // color: #172b4d;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+            // filter: invert(42%) sepia(11%) saturate(906%) hue-rotate(179deg) brightness(95%) contrast(91%);
+            transform: translate(0, 1px);
+        }
+    }
+
+    .add-group-btn {
+        background-color: #0079bf;
+        border: none;
+        color: #fff;
+        height: 32px;
+        padding: 6px 12px;
+        border-radius: 3px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #026aa7;
+        }
+    }
+
+    .cancel-group-btn {
+        border: none;
+        color: #6b778c;
+
+        &:hover {
+            cursor: pointer;
+            color: #172b4d;
+        }
+    }
+
+    .spacer {
+        min-width: 8px;
+        height: 1px;
+    }
+
+    .template-screen {
+        position: fixed;
+        inset: 0;
+        top: 44px;
+        height: calc(100vh - 70px);
+        z-index: 100;
+        // background-color: rgba(224, 10, 10, 0.871);
+        background-color: rgba(0, 0, 0, 0.165);
+        color: #fff;
+        .template-create {
+            position: absolute;
+            top: 0;
+            height: 44px;
+            width: 100%;
+            background-color: #505f79;
+            border-bottom: 1px solid #42526e;
+        }
+        p {
+            margin: 0 8px 0 80px;
+        }
+        .template-btn {
+            padding: 6px 12px;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,
+                Helvetica Neue, sans-serif;
+        }
+        .template-btn.-create {
+            background-color: #0079bf;
+            border-radius: 3px;
+        }
+        .template-btn.-back {
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    }
+}

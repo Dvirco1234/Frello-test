@@ -1,0 +1,47 @@
+.td-desc {
+  height: 56px;
+  border-radius: 3px;
+  background-color: $btnBg;
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: inherit;
+  resize: none;
+  box-shadow: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #e2e4e9;
+  }
+  &.open {
+    background-color: #ffffff;
+    height: 108px;
+    cursor: auto;
+  }
+  &-btns {
+    display: flex;
+    gap: 4px;
+    margin: 4px 0;
+    :first-child {
+      background-color: #1b6aa7;
+      color: #ffffff;
+      &:hover {
+        background-color: #1b6aa7;
+        opacity: 0.9;
+      }
+    }
+    button {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+.desc-txt {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+  @include for-mobile-layout {
+    margin-left: 40px;
+  }
+}
